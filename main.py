@@ -3,6 +3,7 @@ from openai import OpenAI
 from dotenv import load_dotenv, find_dotenv
 import os
 import requests
+import uvicorn
 
 app = FastAPI()
 
@@ -92,3 +93,5 @@ async def stt_clova(file:UploadFile):
     return {"status_code" : 200,
             "STT" : response.text}
 
+if __name__=="__main__":
+    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
