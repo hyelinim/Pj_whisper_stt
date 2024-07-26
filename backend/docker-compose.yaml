@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  backend:
+    container_name: api_server
+    build: .do
+    ports:
+      - "8000:8000" #HOST 8000번을 통해 Container 8000번으로
+    networks:
+      - stt_network
+    restart: always
+
+networks:
+  stt_network:

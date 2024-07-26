@@ -1,0 +1,13 @@
+fastapi
+uvicorn[standard]
+requests
+openai
+langchain-openai
+gunicorn
+chromadb
+tiktoken
+pypdf
+langchain
+langchain-community
+langchain
+streamlit
